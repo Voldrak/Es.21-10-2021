@@ -1,13 +1,27 @@
-const cart = [];
+const cart=[];
 
 function myCart(){
-    let prom = prompt("inserisci cosa vuoi comprare");
+    let lista = prompt("Inserisci cosa vuoi comprare");
+ 
 
-    let scelta = prom.split(" ");
+    if (lista === null)  {
+        alert ("Hai annullato la scelta");
 
-    cart.push(scelta);
+    } if (lista === "") {
+    alert ("Non hai inserito nessun prodotto");
 
-    console.log(cart);
+    } else if (cart.includes(lista) == true) {
+        alert("Prodotto già presente nel carrello")
+    }
 
-    return cart;
- }
+    else if (lista == true) {
+        alert("Ottima scelta!");
+        
+        let scelte = lista.split(" ");
+        cart.push(lista);
+    }
+   
+console.log(lista);
+
+return cart;
+}
