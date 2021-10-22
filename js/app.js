@@ -3,6 +3,7 @@ const cart=[];
 function myCart(){
     let lista = prompt("Inserisci cosa vuoi comprare");
  
+    let scelte = lista.split(" ");
 
     if (lista === null)  {
         alert ("Hai annullato la scelta");
@@ -14,10 +15,10 @@ function myCart(){
         alert("Prodotto già presente nel carrello")
     }
 
-    else if (lista == true) {
+    else  {
         alert("Ottima scelta!");
         
-        let scelte = lista.split(" ");
+        
         cart.push(lista);
     }
    
