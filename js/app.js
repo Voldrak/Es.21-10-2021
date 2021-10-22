@@ -1,28 +1,24 @@
 const cart=[];
 
-function myCart(){
-    let lista = prompt("Inserisci cosa vuoi comprare");
- 
-    let scelte = lista.split(" ");
+function myCart()
+{
+    let lista = prompt("Inserisci i prodotti che vuoi comprare uno per volta");
 
-    if (lista === null)  {
+
+    if (lista === null || lista == "")  {
         alert ("Hai annullato la scelta");
 
-    } if (lista === "") {
-    alert ("Non hai inserito nessun prodotto");
 
-    } else if (cart.includes(lista) == true) {
-        alert("Prodotto già presente nel carrello")
+    } else if (cart.includes(lista)) {
+    alert ("Prodotto già esistente nel carrello");
+
+    
     }
 
     else  {
-        alert("Ottima scelta!");
-        
-        
         cart.push(lista);
+        alert("Ottima scelta!");
     }
    
-console.log(lista);
-
-return cart;
+console.log(cart);
 }
